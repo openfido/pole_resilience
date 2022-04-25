@@ -25,4 +25,6 @@ TIMESTEP=$(grep '^TIMESTEP,' ${OPENFIDO_INPUT}/config.csv | cut -f2 -d,)
 OPTIONS=$(grep '^OPTIONS,' ${OPENFIDO_INPUT}/config.csv | cut -f2 -d,)
 
 cd ${OPENFIDO_OUTPUT}
-/usr/local/bin/gridlabd ${WEATHERGLM} ${POLEGLM} ${NETWORKGLM} ${RECORDERGLM} -D minimum_timestep=${TIMESTEP} ${OPTIONS}
+cp "${OPENFIDO_INPUT}/${CONFIGGLM}" ${CONFIGGLM}
+/usr/local/bin/gridlabd "${OPENFIDO_INPUT}/${WEATHERGLM}" "${OPENFIDO_INPUT}/${POLEGLM}" "${OPENFIDO_INPUT}/${NETWORKGLM}" "${OPENFIDO_INPUT}/${RECORDERGLM}" -D minimum_timestep=${TIMESTEP} ${OPTIONS}
+rm ${CONFIGGLM}
