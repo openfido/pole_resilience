@@ -48,7 +48,7 @@
       "description" : "Additional options",
       "prompt" : "Options",
       "input_type" : "str",
-      "default" : "--ignore_location --include_network"
+      "default" : ""
     }
   }
 }
