@@ -33,8 +33,20 @@
       "default" : ""
     },
     "WEATHERGLM" : {
-      "prompt" : "Weather (GLM)",
+      "prompt" : "Weather model (GLM)",
       "description" : "Weather data GLM file",
+      "input_type" : "upload required",
+      "default" : ""
+    },
+    "WEATHERCSV" : {
+      "prompt" : "Weather data (CSV)",
+      "description" : "Weather data CSV file",
+      "input_type" : "upload required",
+      "default" : ""
+    },
+    "SETTINGSCSV" : {
+      "prompt" : "Settings data (CSV)",
+      "description" : "Settings data CSV file",
       "input_type" : "upload required",
       "default" : ""
     },
