@@ -1,0 +1,54 @@
+{
+  "description" : "Pole resilience analysis",
+  "docker" : "slacgismo/gridlabd:latest",
+  "git" : "https://github.com/openfido/pole_resilience.git",
+  "branch" : "main",
+  "script" : "openfido.sh",
+  "manual" : {
+    "config" : "csv"
+  },
+  "config" : {
+    "NETWORKGLM" : {
+      "prompt" : "Network (GLM)",
+      "description" : "Network model GLM file",
+      "input_type" : "upload required",
+      "default" : ""
+    },
+    "CONFIGGLM" : {
+      "prompt" : "Configuration (GLM)",
+      "description" : "GridLAB-D configuration GLM file",
+      "input_type" : "upload required",
+      "default" : ""
+    },
+    "POLEGLM" : {
+      "prompt" : "Poles (GLM)",
+      "description" : "Pole model GLM file",
+      "input_type" : "upload required",
+      "default" : ""
+    },
+    "RECORDERGLM" : {
+      "prompt" : "Recorders (GLM)",
+      "description" : "Recorders GLM file",
+      "input_type" : "upload required",
+      "default" : ""
+    },
+    "WEATHERGLM" : {
+      "prompt" : "Weather (GLM)",
+      "description" : "Weather data GLM file",
+      "input_type" : "upload required",
+      "default" : ""
+    },
+    "TIMESTEP" : {
+      "prompt" : "Timestep (GLM)",
+      "description" : "Simulation timestep (s)",
+      "input_type" : "str",
+      "default" : "3600"
+    },
+    "OPTIONS" : {
+      "description" : "Additional options",
+      "prompt" : "Options",
+      "input_type" : "str",
+      "default" : "--ignore_location --include_network"
+    }
+  }
+}
